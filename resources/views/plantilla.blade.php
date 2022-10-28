@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               
-              <a class="nav-link  text-white" href="/formulario">Formulario</a>
+              <a class="nav-link  text-white" href="{{route('apodoForm')}}">Formulario</a>
               <a class="nav-link text-white" href="/tabla">Registros</a>
              
             </div>

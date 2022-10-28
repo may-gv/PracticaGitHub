@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorVistas;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,21 @@ use Illuminate\Support\Facades\Route;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-
+/*
 Route::get('/formulario', function () {
     return view('formulario');
 });
 Route::get('/tabla', function () {
     return view('tabla');
-});
+});*/
+
+Route::get('/formulario', [controladorVistas::class, 'viewFormulario'])->name('apodoForm');
+
+Route::get('/tabla', [controladorVistas::class, 'viewTabla'])->name('apodoTabla');
+
+Route::post('GuardarPedido',[controladorVistas::class,'validarFormulario'])->name('Guardar');
+
+
+
+
+
